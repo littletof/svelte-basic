@@ -1,4 +1,8 @@
 <script lang="ts">
+	if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
+
 	import Test from './Test.svelte';
 	import Game from './game/Game.svelte';
 	export let name: string;
